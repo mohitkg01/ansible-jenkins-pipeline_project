@@ -17,5 +17,5 @@
     name: job1
     #state: present
     password: admin
-    url: http://35.174.139.176:8080
+    url: http://44.212.67.179:8080
     user: admin
