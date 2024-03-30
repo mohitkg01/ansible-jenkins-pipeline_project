@@ -4,7 +4,7 @@
     name:
       - curl
       - apt-transport-https
-    state: installed
+    state: latest
 
 - name: Add Jenkins apt repository key.
   apt_key:
@@ -31,7 +31,7 @@
 - name: Install our specific version of Jenkins.
   apt:
     deb: "/tmp/jenkins.deb"
-    state: installed
+    state: latest
   when: specific_version.stat.exists
   notify: configure default users
 
@@ -44,5 +44,5 @@
 - name: Install Jenkins from repository.
   apt:
     name: jenkins
-    state: installed
+    state: latest
   when: jenkins_version is undefined
